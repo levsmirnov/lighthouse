@@ -1,0 +1,175 @@
+"use client";
+import { useState } from "react";
+import ProjectCard, { type Project } from "./ProjectCard";
+
+const projects: Project[] = [
+  {
+    slug: "spendy-wendy",
+    category: "iOS Finance App",
+    name: "Spendy Wendy",
+    description:
+      "A smart personal and family finance tracker for iPhone. Track income, expenses, and budgets — all in one beautiful, intuitive app.",
+    features: [
+      "Multi-wallet support",
+      "Budget categories & insights",
+      "Family sharing ready",
+    ],
+    mockupSrc: "/images/spendy-wendy-mockup.png",
+    mockupGradient: "from-blue-400 to-blue-600",
+  },
+  {
+    slug: "focusflow",
+    category: "Productivity App",
+    name: "FocusFlow",
+    description:
+      "A minimalist productivity app helping users build habits, manage tasks, and stay focused with intelligent daily planning.",
+    features: [
+      "Smart task scheduling",
+      "Habit tracking",
+      "Focus mode timer",
+    ],
+    mockupGradient: "from-indigo-400 to-purple-600",
+  },
+  {
+    slug: "vitalize",
+    category: "Health & Wellness App",
+    name: "Vitalize",
+    description:
+      "A wellness companion app for tracking nutrition, workouts, sleep, and daily energy — designed for modern, busy lifestyles.",
+    features: [
+      "Nutrition & meal tracking",
+      "Workout logging",
+      "Sleep quality insights",
+    ],
+    mockupGradient: "from-teal-400 to-green-600",
+  },
+];
+
+export default function WorkSection() {
+  const [current, setCurrent] = useState(0);
+
+  const prev = () =>
+    setCurrent((c) => (c - 1 + projects.length) % projects.length);
+  const next = () => setCurrent((c) => (c + 1) % projects.length);
+
+  return (
+    <section id="work" className="py-24 px-6 bg-white">
+      <div className="max-w-6xl mx-auto">
+        {/* Section header */}
+        <div className="text-center mb-16">
+          <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-3">
+            Our Work
+          </p>
+          <h2 className="text-4xl font-bold text-slate-950 mb-4">
+            Products We&apos;ve Built
+          </h2>
+          <p className="text-slate-500 text-lg max-w-xl mx-auto leading-relaxed">
+            A selection of digital products crafted with care — from idea to App Store.
+          </p>
+        </div>
+
+        {/* Carousel wrapper */}
+        <div className="relative">
+          {/* Desktop left arrow */}
+          <button
+            onClick={prev}
+            aria-label="Previous project"
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 z-10 w-12 h-12 bg-white border-2 border-slate-200 hover:border-blue-600 hover:text-blue-600 rounded-full items-center justify-center text-slate-500 transition-colors shadow-sm"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="15,18 9,12 15,6" />
+            </svg>
+          </button>
+
+          {/* Desktop right arrow */}
+          <button
+            onClick={next}
+            aria-label="Next project"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 z-10 w-12 h-12 bg-white border-2 border-slate-200 hover:border-blue-600 hover:text-blue-600 rounded-full items-center justify-center text-slate-500 transition-colors shadow-sm"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="9,18 15,12 9,6" />
+            </svg>
+          </button>
+
+          {/* Project card */}
+          <ProjectCard project={projects[current]} />
+
+          {/* Mobile nav arrows */}
+          <div className="flex md:hidden justify-center gap-4 mt-6">
+            <button
+              onClick={prev}
+              aria-label="Previous"
+              className="w-11 h-11 bg-white border-2 border-slate-200 hover:border-blue-600 hover:text-blue-600 rounded-full flex items-center justify-center text-slate-500 transition-colors"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="15,18 9,12 15,6" />
+              </svg>
+            </button>
+            <button
+              onClick={next}
+              aria-label="Next"
+              className="w-11 h-11 bg-white border-2 border-slate-200 hover:border-blue-600 hover:text-blue-600 rounded-full flex items-center justify-center text-slate-500 transition-colors"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="9,18 15,12 9,6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Dot indicators */}
+        <div className="flex justify-center gap-2.5 mt-8">
+          {projects.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              aria-label={`Go to project ${i + 1}`}
+              className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                i === current
+                  ? "bg-blue-600"
+                  : "bg-slate-300 hover:bg-slate-400"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
