@@ -1,0 +1,18 @@
+<svg viewBox="0 0 22 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cap -->
+  <rect x="9" y="0" width="4" height="4.5" rx="0.8" fill="#0F172A"/>
+  <!-- Dome -->
+  <path d="M5 7 Q11 2 17 7 L17 8 L5 8 Z" fill="#0F172A"/>
+  <!-- Lamp room -->
+  <rect x="5" y="8" width="12" height="8" rx="0.5" fill="#0F172A"/>
+  <!-- Light -->
+  <circle cx="11" cy="12.5" r="2.1" fill="#2563EB"/>
+  <!-- Gallery -->
+  <rect x="2" y="16" width="18" height="2" rx="0.5" fill="#0F172A"/>
+  <!-- Tower -->
+  <path d="M5 18 L17 18 L19 28 L3 28 Z" fill="#0F172A"/>
+  <!-- Base -->
+  <rect x="2" y="28" width="18" height="2.5" rx="0.5" fill="#0F172A"/>
+  <!-- Foundation -->
+  <rect x="0" y="30.5" width="22" height="3.5" rx="0.5" fill="#0F172A"/>
+</svg>
