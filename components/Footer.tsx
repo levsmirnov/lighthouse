@@ -6,7 +6,7 @@ export default function Footer() {
           <img
             src="/images/Logo Trans.png"
             alt="Lighthouse Digi Lab"
-            className="h-16 w-auto brightness-0 invert"
+            className="h-12 w-auto brightness-0 invert"
           />
           <span className="text-slate-500 text-sm">
             © 2026 Lighthouse Digi Lab Oy · 3238184-8. All rights reserved.
