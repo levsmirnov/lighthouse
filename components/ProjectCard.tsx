@@ -8,6 +8,7 @@ export type Project = {
   features: string[];
   mockupSrc?: string;
   mockupGradient: string;
+  logoSrc?: string;
 };
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -45,9 +46,18 @@ export default function ProjectCard({ project }: { project: Project }) {
 
         {/* Text content */}
         <div className="flex-1 p-10 md:p-12 flex flex-col justify-center">
-          <span className="inline-block mb-4 px-4 py-1.5 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full self-start">
-            {project.category}
-          </span>
+          <div className="flex items-center gap-3 mb-4">
+            {project.logoSrc && (
+              <img
+                src={project.logoSrc}
+                alt={`${project.name} icon`}
+                className="w-12 h-12 rounded-xl shadow-sm flex-shrink-0"
+              />
+            )}
+            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full">
+              {project.category}
+            </span>
+          </div>
           <h3 className="text-3xl font-bold text-slate-950 mb-4">{project.name}</h3>
           <p className="text-slate-500 text-base leading-relaxed mb-6">
             {project.description}
