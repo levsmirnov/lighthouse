@@ -14,7 +14,7 @@ const projects: Project[] = [
       "Budget categories & insights",
       "Family sharing ready",
     ],
-    mockupSrc: "/images/spendy-wendy-mockup.png",
+    mockupSrc: "/images/Simulator Screenshot - iPhone 17 Pro - 2026-05-20 at 13.13.31-left copy.png",
     mockupGradient: "from-blue-400 to-blue-600",
   },
   {
