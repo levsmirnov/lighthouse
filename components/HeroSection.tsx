@@ -132,29 +132,14 @@ export default function HeroSection() {
                 <rect width="100%" height="100%" fill="url(#herogrid)" />
               </svg>
 
-              {/* Lighthouse icon — left anchor */}
-              <div className="relative z-10 flex-shrink-0 ml-10">
-                <LighthouseIcon
-                  className="text-slate-900 drop-shadow-md"
-                  accentColor="#2563EB"
-                  style={{ width: 64, height: 98 }}
+              {/* Phone mockup */}
+              <div className="relative z-10 flex items-center justify-center w-full h-full py-6">
+                <img
+                  src="/images/Simulator Screenshot - iPhone 17 Pro - 2026-05-20 at 13.13.31-left copy.png"
+                  alt="Spendy Wendy app"
+                  className="h-full max-h-[380px] w-auto object-contain drop-shadow-2xl"
                 />
               </div>
-
-              {/* Digital beam — fills the rest of the card */}
-              <div className="absolute inset-0 left-[120px] overflow-hidden pointer-events-none">
-                <DigitalBeam />
-              </div>
-
-              {/* Brand name — bottom of card */}
-              <div className="absolute bottom-6 left-10 right-6 z-10">
-                <div className="text-slate-950 font-bold text-lg leading-tight">Lighthouse</div>
-                <div className="text-blue-600 font-bold text-lg leading-tight">Digi Lab</div>
-              </div>
-
-              {/* Accent circles */}
-              <div className="absolute top-6 right-6 w-16 h-16 bg-blue-400 opacity-15 rounded-full" />
-              <div className="absolute bottom-16 right-8 w-8 h-8 bg-blue-600 opacity-10 rounded-full" />
             </div>
           </div>
 
