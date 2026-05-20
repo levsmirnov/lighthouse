@@ -4,9 +4,9 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <img
-            src="/images/Frame 13.png"
+            src="/images/Logo Trans.png"
             alt="Lighthouse Digi Lab"
-            className="h-10 w-auto brightness-0 invert"
+            className="h-16 w-auto brightness-0 invert"
           />
           <span className="text-slate-500 text-sm">
             © 2026 Lighthouse Digi Lab Oy · 3238184-8. All rights reserved.
