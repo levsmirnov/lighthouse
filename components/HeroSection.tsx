@@ -118,29 +118,13 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right — brand card */}
-          <div className="flex-1 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md h-80 lg:h-[420px] bg-gradient-to-br from-[#EFF6FF] to-[#DBEAFE] rounded-3xl overflow-hidden shadow-xl flex items-center">
-
-              {/* Grid pattern background */}
-              <svg className="absolute inset-0 w-full h-full opacity-30" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <pattern id="herogrid" width="40" height="40" patternUnits="userSpaceOnUse">
-                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2563EB" strokeWidth="0.5" />
-                  </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#herogrid)" />
-              </svg>
-
-              {/* Phone mockup */}
-              <div className="relative z-10 flex items-center justify-center w-full h-full py-6">
-                <img
-                  src="/images/Simulator Screenshot - iPhone 17 Pro - 2026-05-20 at 13.13.31-left copy.png"
-                  alt="Spendy Wendy app"
-                  className="h-full max-h-[380px] w-auto object-contain drop-shadow-2xl"
-                />
-              </div>
-            </div>
+          {/* Right — phone mockup */}
+          <div className="flex-1 flex justify-center lg:justify-end items-center">
+            <img
+              src="/images/Simulator Screenshot - iPhone 17 Pro - 2026-05-20 at 13.13.31-left copy.png"
+              alt="Spendy Wendy app"
+              className="w-auto max-h-[570px] object-contain drop-shadow-2xl"
+            />
           </div>
 
         </div>
