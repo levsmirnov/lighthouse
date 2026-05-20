@@ -8,9 +8,10 @@ export default function Footer() {
             alt="Lighthouse Digi Lab"
             className="h-10 w-auto brightness-0 invert"
           />
-          <span className="text-slate-500 text-sm">
-            © 2026 Lighthouse Digi Lab. All rights reserved.
-          </span>
+          <div className="flex flex-col text-slate-500 text-sm">
+            <span>© 2026 Lighthouse Digi Lab. All rights reserved.</span>
+            <span>Lighthouse Digi Lab Oy · 3238184-8</span>
+          </div>
         </div>
         <p className="text-slate-400 text-sm">Built with ❤️ in Helsinki</p>
       </div>
