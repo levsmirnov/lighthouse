@@ -13,7 +13,7 @@ export default function Navbar() {
           <img
             src="/images/Frame 13.png"
             alt="Lighthouse Digi Lab"
-            className="h-12 w-auto"
+            className="h-16 w-auto"
           />
         </Link>
 
