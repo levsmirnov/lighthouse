@@ -7,13 +7,13 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200">
-      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <nav className="max-w-6xl mx-auto px-6 h-24 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <img
             src="/images/Logo Name Transp.png"
             alt="Lighthouse Digi Lab"
-            className="h-14 w-auto"
+            className="h-20 w-auto"
           />
         </Link>
 

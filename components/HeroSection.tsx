@@ -82,7 +82,7 @@ function DigitalBeam() {
 
 export default function HeroSection() {
   return (
-    <section id="about" className="relative pt-32 pb-24 px-6 bg-[#F8FAFF] overflow-hidden">
+    <section id="about" className="relative pt-40 pb-24 px-6 bg-[#F8FAFF] overflow-hidden">
       {/* Faint background blob */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600 opacity-[0.05] rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none" />
 
