@@ -1,8 +1,6 @@
 "use client";
 
-import { useState } from "react";
-
-type FormState = "idle" | "sending" | "success" | "error";
+import { useForm, ValidationError } from "@formspree/react";
 
 const SUBJECTS = [
   "Account & Sign In",
@@ -15,46 +13,7 @@ const SUBJECTS = [
 ];
 
 export default function SpendyWendySupportForm() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [status, setStatus] = useState<FormState>("idle");
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("sending");
-
-    try {
-      const res = await fetch("https://formspree.io/f/xgvkwpja", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
-          subject: form.subject,
-          message: form.message,
-        }),
-      });
-
-      if (res.ok) {
-        setStatus("success");
-        setForm({ name: "", email: "", subject: "", message: "" });
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
-  };
+  const [state, handleSubmit] = useForm("mdajeqqv");
 
   const inputBase =
     "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 text-sm placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all";
@@ -70,7 +29,7 @@ export default function SpendyWendySupportForm() {
       </div>
 
       <div className="bg-[#F8FAFF] rounded-3xl border border-slate-200 p-8 md:p-10">
-        {status === "success" ? (
+        {state.succeeded ? (
           /* Success state */
           <div className="flex flex-col items-center justify-center py-10 text-center gap-4">
             <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
@@ -91,12 +50,6 @@ export default function SpendyWendySupportForm() {
             <p className="text-slate-500 text-sm max-w-xs">
               Thanks for reaching out. We&apos;ll reply to your email within 24 hours.
             </p>
-            <button
-              onClick={() => setStatus("idle")}
-              className="mt-2 text-blue-600 hover:text-blue-700 text-sm font-semibold transition-colors"
-            >
-              Send another message
-            </button>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-5">
@@ -111,10 +64,9 @@ export default function SpendyWendySupportForm() {
                   name="name"
                   required
                   placeholder="Mark"
-                  value={form.name}
-                  onChange={handleChange}
                   className={inputBase}
                 />
+                <ValidationError field="name" prefix="Name" errors={state.errors} className="text-red-500 text-xs mt-1" />
               </div>
               <div>
                 <label className="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wide">
@@ -125,10 +77,9 @@ export default function SpendyWendySupportForm() {
                   name="email"
                   required
                   placeholder="mark@example.com"
-                  value={form.email}
-                  onChange={handleChange}
                   className={inputBase}
                 />
+                <ValidationError field="email" prefix="Email" errors={state.errors} className="text-red-500 text-xs mt-1" />
               </div>
             </div>
 
@@ -140,8 +91,7 @@ export default function SpendyWendySupportForm() {
               <select
                 name="subject"
                 required
-                value={form.subject}
-                onChange={handleChange}
+                defaultValue=""
                 className={`${inputBase} appearance-none cursor-pointer`}
               >
                 <option value="" disabled>
@@ -165,26 +115,18 @@ export default function SpendyWendySupportForm() {
                 required
                 rows={5}
                 placeholder="Describe your issue or question in detail…"
-                value={form.message}
-                onChange={handleChange}
                 className={`${inputBase} resize-none`}
               />
+              <ValidationError field="message" prefix="Message" errors={state.errors} className="text-red-500 text-xs mt-1" />
             </div>
-
-            {/* Error */}
-            {status === "error" && (
-              <p className="text-red-500 text-sm">
-                Something went wrong. Please try again or email us directly.
-              </p>
-            )}
 
             {/* Submit */}
             <button
               type="submit"
-              disabled={status === "sending"}
+              disabled={state.submitting}
               className="w-full sm:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold rounded-full text-sm transition-colors flex items-center gap-2"
             >
-              {status === "sending" ? (
+              {state.submitting ? (
                 <>
                   <svg
                     className="animate-spin"
