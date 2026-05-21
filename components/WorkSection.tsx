@@ -66,7 +66,7 @@ const projects: Project[] = [
     mockupSrc: "/images/iPhone 14 & 15 Pro - 17 (3)-portrait.png",
     mockupGradient: "from-orange-400 to-red-500",
     logoSrc: "/images/Minimalist_app_icon_logo_for_a_Nano_Banana_2_50314.png",
-    accent: "#ea580c",
+    accent: "#32312f",
   },
 ];
 
