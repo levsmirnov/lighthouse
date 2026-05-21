@@ -231,7 +231,7 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className="w-full py-3.5 bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white font-semibold rounded-full transition-colors"
+                  className="w-full py-3.5 btn-gradient disabled:opacity-60 text-white font-semibold rounded-full"
                 >
                   {status === "sending" ? "Sending…" : "Send Message"}
                 </button>

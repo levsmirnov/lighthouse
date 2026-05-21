@@ -85,7 +85,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           <div className="flex flex-wrap gap-3">
             <a
               href="#"
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full text-sm transition-colors"
+              className="px-6 py-3 btn-gradient text-white font-semibold rounded-full text-sm"
             >
               Download on App Store
             </a>

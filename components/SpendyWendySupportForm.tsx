@@ -124,7 +124,7 @@ export default function SpendyWendySupportForm() {
             <button
               type="submit"
               disabled={state.submitting}
-              className="w-full sm:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold rounded-full text-sm transition-colors flex items-center gap-2"
+              className="w-full sm:w-auto px-8 py-3 btn-gradient disabled:opacity-60 text-white font-semibold rounded-full text-sm flex items-center gap-2"
             >
               {state.submitting ? (
                 <>

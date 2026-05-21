@@ -1,88 +1,29 @@
-import LighthouseIcon from "./LighthouseIcon";
-
-function DigitalBeam() {
-  const color = "#2563EB";
-  return (
-    <svg
-      viewBox="0 0 200 110"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-full h-full"
-      preserveAspectRatio="xMidYMid meet"
-    >
-      {/* Centre row */}
-      <rect x="0"   y="46" width="12" height="12" rx="1" fill={color} opacity="0.85" />
-      <rect x="18"  y="45" width="11" height="11" rx="1" fill={color} opacity="0.72" />
-      <rect x="35"  y="44" width="10" height="10" rx="1" fill={color} opacity="0.59" />
-      <rect x="51"  y="44" width="9"  height="9"  rx="1" fill={color} opacity="0.47" />
-      <rect x="66"  y="43" width="8"  height="8"  rx="1" fill={color} opacity="0.36" />
-      <rect x="80"  y="43" width="7"  height="7"  rx="1" fill={color} opacity="0.26" />
-      <rect x="93"  y="44" width="6"  height="6"  rx="1" fill={color} opacity="0.17" />
-      <rect x="105" y="44" width="5"  height="5"  rx="1" fill={color} opacity="0.10" />
-      <rect x="116" y="44" width="4"  height="4"  rx="1" fill={color} opacity="0.06" />
-
-      {/* Up 1 */}
-      <rect x="3"   y="32" width="11" height="11" rx="1" fill={color} opacity="0.72" />
-      <rect x="20"  y="30" width="10" height="10" rx="1" fill={color} opacity="0.59" />
-      <rect x="37"  y="28" width="9"  height="9"  rx="1" fill={color} opacity="0.47" />
-      <rect x="53"  y="26" width="8"  height="8"  rx="1" fill={color} opacity="0.36" />
-      <rect x="68"  y="25" width="7"  height="7"  rx="1" fill={color} opacity="0.26" />
-      <rect x="82"  y="24" width="6"  height="6"  rx="1" fill={color} opacity="0.17" />
-      <rect x="95"  y="23" width="5"  height="5"  rx="1" fill={color} opacity="0.10" />
-      <rect x="107" y="23" width="4"  height="4"  rx="1" fill={color} opacity="0.06" />
-
-      {/* Up 2 */}
-      <rect x="8"   y="18" width="10" height="10" rx="1" fill={color} opacity="0.55" />
-      <rect x="25"  y="15" width="9"  height="9"  rx="1" fill={color} opacity="0.42" />
-      <rect x="41"  y="12" width="8"  height="8"  rx="1" fill={color} opacity="0.31" />
-      <rect x="56"  y="10" width="7"  height="7"  rx="1" fill={color} opacity="0.21" />
-      <rect x="70"  y="9"  width="6"  height="6"  rx="1" fill={color} opacity="0.13" />
-      <rect x="83"  y="8"  width="5"  height="5"  rx="1" fill={color} opacity="0.08" />
-      <rect x="95"  y="7"  width="4"  height="4"  rx="1" fill={color} opacity="0.05" />
-
-      {/* Up 3 */}
-      <rect x="16"  y="5"  width="9"  height="9"  rx="1" fill={color} opacity="0.35" />
-      <rect x="33"  y="1"  width="8"  height="8"  rx="1" fill={color} opacity="0.24" />
-      <rect x="49"  y="-1" width="7"  height="7"  rx="1" fill={color} opacity="0.15" />
-      <rect x="64"  y="-3" width="6"  height="6"  rx="1" fill={color} opacity="0.08" />
-
-      {/* Down 1 */}
-      <rect x="3"   y="61" width="11" height="11" rx="1" fill={color} opacity="0.72" />
-      <rect x="20"  y="63" width="10" height="10" rx="1" fill={color} opacity="0.59" />
-      <rect x="37"  y="65" width="9"  height="9"  rx="1" fill={color} opacity="0.47" />
-      <rect x="53"  y="66" width="8"  height="8"  rx="1" fill={color} opacity="0.36" />
-      <rect x="68"  y="67" width="7"  height="7"  rx="1" fill={color} opacity="0.26" />
-      <rect x="82"  y="68" width="6"  height="6"  rx="1" fill={color} opacity="0.17" />
-      <rect x="95"  y="69" width="5"  height="5"  rx="1" fill={color} opacity="0.10" />
-      <rect x="107" y="69" width="4"  height="4"  rx="1" fill={color} opacity="0.06" />
-
-      {/* Down 2 */}
-      <rect x="8"   y="76" width="10" height="10" rx="1" fill={color} opacity="0.55" />
-      <rect x="25"  y="79" width="9"  height="9"  rx="1" fill={color} opacity="0.42" />
-      <rect x="41"  y="82" width="8"  height="8"  rx="1" fill={color} opacity="0.31" />
-      <rect x="56"  y="84" width="7"  height="7"  rx="1" fill={color} opacity="0.21" />
-      <rect x="70"  y="86" width="6"  height="6"  rx="1" fill={color} opacity="0.13" />
-      <rect x="83"  y="87" width="5"  height="5"  rx="1" fill={color} opacity="0.08" />
-      <rect x="95"  y="88" width="4"  height="4"  rx="1" fill={color} opacity="0.05" />
-
-      {/* Down 3 */}
-      <rect x="16"  y="90" width="9"  height="9"  rx="1" fill={color} opacity="0.35" />
-      <rect x="33"  y="93" width="8"  height="8"  rx="1" fill={color} opacity="0.24" />
-      <rect x="49"  y="96" width="7"  height="7"  rx="1" fill={color} opacity="0.15" />
-      <rect x="64"  y="98" width="6"  height="6"  rx="1" fill={color} opacity="0.08" />
-
-      {/* Far scattered */}
-      <rect x="122" y="42" width="3" height="3" rx="0.5" fill={color} opacity="0.05" />
-      <rect x="130" y="46" width="2" height="2" rx="0.5" fill={color} opacity="0.04" />
-      <rect x="122" y="50" width="3" height="3" rx="0.5" fill={color} opacity="0.05" />
-      <rect x="138" y="44" width="2" height="2" rx="0.5" fill={color} opacity="0.03" />
-    </svg>
-  );
-}
+"use client";
+import { useRef, useState } from "react";
 
 export default function HeroSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const { left, top, width, height } = el.getBoundingClientRect();
+    const x = ((e.clientX - left) / width - 0.5) * 28;
+    const y = ((e.clientY - top) / height - 0.5) * 20;
+    setOffset({ x, y });
+  };
+
+  const handleMouseLeave = () => setOffset({ x: 0, y: 0 });
+
   return (
-    <section id="about" className="relative pt-36 pb-24 px-6 bg-[#F8FAFF] overflow-hidden">
+    <section
+      id="about"
+      ref={sectionRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="relative pt-36 pb-24 px-6 bg-[#F8FAFF] overflow-hidden"
+    >
       {/* Faint background blob */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600 opacity-[0.05] rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none" />
 
@@ -118,12 +59,16 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right — phone mockup */}
+          {/* Right — phone mockup with parallax */}
           <div className="flex-1 flex justify-center lg:justify-end items-center">
             <img
               src="/images/Simulator Screenshot - iPhone 17 Pro - 2026-05-20 at 13.13.31-left copy.png"
               alt="Spendy Wendy app"
-              className="w-auto max-h-[570px] object-contain drop-shadow-2xl animate-float"
+              className="w-auto max-h-[570px] object-contain drop-shadow-2xl"
+              style={{
+                transform: `translate(${offset.x}px, ${offset.y}px)`,
+                transition: "transform 0.12s ease-out",
+              }}
             />
           </div>
 

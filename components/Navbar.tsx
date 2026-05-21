@@ -27,7 +27,7 @@ export default function Navbar() {
           </a>
           <a
             href="#contact"
-            className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full text-sm transition-colors"
+            className="px-5 py-2 btn-gradient text-white font-semibold rounded-full text-sm"
           >
             Contact
           </a>
