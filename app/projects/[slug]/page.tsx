@@ -90,7 +90,16 @@ export default async function ProjectPage({
         </div>
 
         {/* Title */}
-        <h1 className="text-5xl font-bold text-slate-950 mb-6">{project.name}</h1>
+        <div className="flex items-center gap-4 mb-6">
+          <h1 className="text-5xl font-bold text-slate-950">{project.name}</h1>
+          {slug === "spendy-wendy" && (
+            <img
+              src="/images/Frame 14.png"
+              alt="Spendy Wendy icon"
+              className="w-14 h-14 rounded-2xl shadow-md flex-shrink-0"
+            />
+          )}
+        </div>
 
         {/* Description */}
         <p className="text-lg text-slate-500 leading-relaxed mb-12">
