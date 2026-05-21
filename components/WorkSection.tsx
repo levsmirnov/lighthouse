@@ -50,7 +50,7 @@ const projects: Project[] = [
     mockupSrc: "/images/hushwood-mockup.png",
     mockupGradient: "from-green-400 to-emerald-600",
     logoSrc: "/images/hushwood-icon.png",
-    accent: "#16a34a",
+    accent: "#335118",
   },
   {
     slug: "plankster",
