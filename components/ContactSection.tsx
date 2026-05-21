@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import FadeIn from "./FadeIn";
 
 type FormStatus = "idle" | "sending" | "success" | "error";
 
@@ -41,7 +42,7 @@ export default function ContactSection() {
     <section id="contact" className="py-24 px-6 bg-[#F8FAFF]">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
-        <div className="text-center mb-16">
+        <FadeIn className="text-center mb-16">
           <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-3">
             Contact
           </p>
@@ -52,11 +53,11 @@ export default function ContactSection() {
             Have a project in mind? We&apos;d love to hear about it. Drop us a message
             and we&apos;ll get back to you within 24 hours.
           </p>
-        </div>
+        </FadeIn>
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           {/* Left column — contact info */}
-          <div className="flex-1 space-y-8">
+          <FadeIn delay={100} className="flex-1 space-y-8">
             {/* Email */}
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -125,10 +126,11 @@ export default function ContactSection() {
                 Great digital products start with a great conversation.
               </p>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Right column — form */}
-          <div className="flex-1 bg-white rounded-3xl p-8 shadow-sm border border-slate-200">
+          <FadeIn delay={200} className="flex-1">
+          <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-200">
             {status === "success" ? (
               <div className="flex flex-col items-center justify-center h-full py-16 text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-5">
@@ -238,6 +240,7 @@ export default function ContactSection() {
               </form>
             )}
           </div>
+          </FadeIn>
         </div>
       </div>
     </section>

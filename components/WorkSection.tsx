@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import ProjectCard, { type Project } from "./ProjectCard";
+import FadeIn from "./FadeIn";
 
 const projects: Project[] = [
   {
@@ -57,7 +58,7 @@ export default function WorkSection() {
     <section id="work" className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
-        <div className="text-center mb-16">
+        <FadeIn className="text-center mb-16">
           <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-3">
             Our Work
           </p>
@@ -67,9 +68,10 @@ export default function WorkSection() {
           <p className="text-slate-500 text-lg max-w-xl mx-auto leading-relaxed">
             A selection of digital products crafted with care — from idea to App Store.
           </p>
-        </div>
+        </FadeIn>
 
         {/* Carousel wrapper */}
+        <FadeIn delay={150}>
         <div className="relative">
           {/* Desktop left arrow */}
           <button
@@ -170,6 +172,7 @@ export default function WorkSection() {
             />
           ))}
         </div>
+        </FadeIn>
       </div>
     </section>
   );
