@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FeatureCarousel from "@/components/FeatureCarousel";
 import SpendyWendyFAQ from "@/components/SpendyWendyFAQ";
+import SpendyWendySupportForm from "@/components/SpendyWendySupportForm";
 
 type ProjectData = {
   name: string;
@@ -106,6 +107,7 @@ export default async function ProjectPage({
               <FeatureCarousel />
             </div>
             <SpendyWendyFAQ />
+            <SpendyWendySupportForm />
           </>
         ) : (
           <div className="w-full h-72 rounded-3xl flex items-center justify-center mb-12 relative overflow-hidden bg-slate-100">
