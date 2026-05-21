@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   title: "Lighthouse Digi Lab — Digital Solutions Studio",
   description:
     "Lighthouse Digi Lab is a global digital solutions studio crafting mobile apps, web platforms, and digital products that people love.",
+  icons: {
+    icon: "/images/Logo Trans.png",
+    apple: "/images/Logo Trans.png",
+    shortcut: "/images/Logo Trans.png",
+  },
 };
 
 export default function RootLayout({
