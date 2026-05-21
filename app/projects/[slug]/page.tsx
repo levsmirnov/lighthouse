@@ -1,5 +1,6 @@
 import Link from "next/link";
 import FeatureCarousel from "@/components/FeatureCarousel";
+import SpendyWendyFAQ from "@/components/SpendyWendyFAQ";
 
 type ProjectData = {
   name: string;
@@ -97,12 +98,15 @@ export default async function ProjectPage({
 
         {/* Feature showcase */}
         {slug === "spendy-wendy" ? (
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-slate-950 mb-6">
-              Key Features
-            </h2>
-            <FeatureCarousel />
-          </div>
+          <>
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-slate-950 mb-6">
+                Key Features
+              </h2>
+              <FeatureCarousel />
+            </div>
+            <SpendyWendyFAQ />
+          </>
         ) : (
           <div className="w-full h-72 rounded-3xl flex items-center justify-center mb-12 relative overflow-hidden bg-slate-100">
             <div
