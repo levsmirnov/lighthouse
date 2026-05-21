@@ -120,13 +120,6 @@ export default async function ProjectPage({
           </div>
         )}
 
-        {/* App Store button */}
-        <a
-          href="#"
-          className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full text-lg transition-colors"
-        >
-          Download on App Store
-        </a>
       </div>
     </div>
   );
