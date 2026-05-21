@@ -32,20 +32,6 @@ const projects: Record<string, ProjectData> = {
       "RitualLoop is a minimalist habit tracker with gamification built in. Create your daily rituals, mark them done with a single tap, and watch your Loop Streak grow — an unbroken chain of consistent days. Your character levels up as you complete rituals, weekly reviews keep you honest, and quiet reminders arrive exactly when you need them. Build habits. Close the loop. Every day.",
     gradient: "from-violet-400 to-purple-600",
   },
-  "focusflow": {
-    name: "FocusFlow",
-    category: "Productivity App",
-    description:
-      "FocusFlow is a minimalist productivity app that helps you build better habits and stay focused on what matters most. With intelligent daily planning, FocusFlow schedules your tasks at optimal times based on your energy patterns and preferences. Track habits with a simple streak system, manage your to-do list with smart prioritization, and enter deep focus mode with a built-in Pomodoro timer. FocusFlow is for people who want to do more — without the overwhelm.",
-    gradient: "from-indigo-400 to-purple-600",
-  },
-  "vitalize": {
-    name: "Vitalize",
-    category: "Health & Wellness App",
-    description:
-      "Vitalize is your all-in-one wellness companion built for modern life. Log meals and track macros with a comprehensive food database, record workouts across dozens of activity types, and get a full picture of your sleep quality each morning. Vitalize connects the dots between nutrition, movement, and rest to surface insights that help you feel your best every day. It's built for busy people who want to stay healthy without making it a full-time job.",
-    gradient: "from-teal-400 to-green-600",
-  },
 };
 
 export function generateStaticParams() {
@@ -53,8 +39,6 @@ export function generateStaticParams() {
     { slug: "spendy-wendy" },
     { slug: "ritualloop" },
     { slug: "plankster" },
-    { slug: "focusflow" },
-    { slug: "vitalize" },
   ];
 }
 

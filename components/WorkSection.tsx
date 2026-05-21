@@ -49,32 +49,6 @@ const projects: Project[] = [
     mockupGradient: "from-orange-400 to-red-500",
     logoSrc: "/images/Minimalist_app_icon_logo_for_a_Nano_Banana_2_50314.png",
   },
-  {
-    slug: "focusflow",
-    category: "Productivity App",
-    name: "FocusFlow",
-    description:
-      "A minimalist productivity app helping users build habits, manage tasks, and stay focused with intelligent daily planning.",
-    features: [
-      "Smart task scheduling",
-      "Habit tracking",
-      "Focus mode timer",
-    ],
-    mockupGradient: "from-indigo-400 to-purple-600",
-  },
-  {
-    slug: "vitalize",
-    category: "Health & Wellness App",
-    name: "Vitalize",
-    description:
-      "A wellness companion app for tracking nutrition, workouts, sleep, and daily energy — designed for modern, busy lifestyles.",
-    features: [
-      "Nutrition & meal tracking",
-      "Workout logging",
-      "Sleep quality insights",
-    ],
-    mockupGradient: "from-teal-400 to-green-600",
-  },
 ];
 
 export default function WorkSection() {
