@@ -18,6 +18,13 @@ const projects: Record<string, ProjectData> = {
       "Spendy Wendy is a smart personal and family finance tracker designed exclusively for iPhone. It helps you take control of your money with a clean, intuitive interface that makes budgeting feel effortless. Track income and expenses across multiple wallets, set category budgets, and get insights that actually make sense. Whether you're managing your own finances or coordinating with family members, Spendy Wendy keeps everyone on the same page — beautifully.",
     gradient: "from-blue-400 to-blue-600",
   },
+  "plankster": {
+    name: "Plankster",
+    category: "iOS Fitness App",
+    description:
+      "Hold longer. Every day. Plankster is a minimalist plank timer for people who take their core seriously. Set your timer, hold your plank, beat your record. Track every session and watch your endurance grow — one hold at a time. Silent vibration cues keep you focused at key milestones, and the streak counter makes sure you never break the chain.",
+    gradient: "from-orange-400 to-red-500",
+  },
   "ritualloop": {
     name: "RitualLoop",
     category: "Habit Tracker App",
@@ -45,6 +52,7 @@ export function generateStaticParams() {
   return [
     { slug: "spendy-wendy" },
     { slug: "ritualloop" },
+    { slug: "plankster" },
     { slug: "focusflow" },
     { slug: "vitalize" },
   ];

@@ -35,6 +35,21 @@ const projects: Project[] = [
     logoSrc: "/images/remore_the_circle_leave_only_t_Nano_Banana_2_12441.png",
   },
   {
+    slug: "plankster",
+    category: "iOS Fitness App",
+    name: "Plankster",
+    description:
+      "One exercise. One timer. One goal. A minimalist plank timer for people who take their core seriously. Set your timer, hold your plank, beat your record.",
+    features: [
+      "Personal best tracker",
+      "Full session history",
+      "Streak counter — don't break the chain",
+    ],
+    mockupSrc: "/images/iPhone 14 & 15 Pro - 17 (3)-portrait.png",
+    mockupGradient: "from-orange-400 to-red-500",
+    logoSrc: "/images/Minimalist_app_icon_logo_for_a_Nano_Banana_2_50314.png",
+  },
+  {
     slug: "focusflow",
     category: "Productivity App",
     name: "FocusFlow",
