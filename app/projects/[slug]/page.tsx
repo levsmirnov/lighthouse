@@ -18,6 +18,13 @@ const projects: Record<string, ProjectData> = {
       "Spendy Wendy is a smart personal and family finance tracker designed exclusively for iPhone. It helps you take control of your money with a clean, intuitive interface that makes budgeting feel effortless. Track income and expenses across multiple wallets, set category budgets, and get insights that actually make sense. Whether you're managing your own finances or coordinating with family members, Spendy Wendy keeps everyone on the same page — beautifully.",
     gradient: "from-blue-400 to-blue-600",
   },
+  "hushwood": {
+    name: "Hushwood",
+    category: "Meditation App",
+    description:
+      "Sit still. Grow something. Hushwood is a minimalist meditation timer that turns your stillness into something alive. Every session you sit, breathe and focus — your tree grows. Miss a day and it stays bare. Keep your practice and watch your grove flourish. Your meditation history becomes a living forest, session by session.",
+    gradient: "from-green-400 to-emerald-600",
+  },
   "plankster": {
     name: "Plankster",
     category: "iOS Fitness App",
@@ -38,6 +45,7 @@ export function generateStaticParams() {
   return [
     { slug: "spendy-wendy" },
     { slug: "ritualloop" },
+    { slug: "hushwood" },
     { slug: "plankster" },
   ];
 }

@@ -35,6 +35,21 @@ const projects: Project[] = [
     logoSrc: "/images/remore_the_circle_leave_only_t_Nano_Banana_2_12441.png",
   },
   {
+    slug: "hushwood",
+    category: "Meditation App",
+    name: "Hushwood",
+    description:
+      "Your meditation grows a tree. A minimalist meditation timer that turns your stillness into something alive. Every session you sit and breathe — your tree grows. Keep your practice and watch your grove flourish.",
+    features: [
+      "Living tree that grows with every session",
+      "Personal grove — history as a forest",
+      "Gentle breathing cues, silent & distraction-free",
+    ],
+    mockupSrc: "/images/hushwood-mockup.png",
+    mockupGradient: "from-green-400 to-emerald-600",
+    logoSrc: "/images/hushwood-icon.png",
+  },
+  {
     slug: "plankster",
     category: "iOS Fitness App",
     name: "Plankster",
