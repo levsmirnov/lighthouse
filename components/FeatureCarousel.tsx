@@ -128,7 +128,7 @@ export default function FeatureCarousel() {
 
           {/* RIGHT — phone mockup */}
           <div
-            className={`flex-1 flex items-end justify-center bg-gradient-to-br from-blue-50 to-blue-100 py-8 px-6 transition-all duration-350 ${
+            className={`flex-1 flex items-end justify-center py-8 px-6 transition-all duration-350 ${
               animating
                 ? direction === "next"
                   ? "opacity-0 translate-x-6"
