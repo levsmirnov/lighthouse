@@ -1,26 +1,28 @@
 "use client";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const [scrollX, setScrollX] = useState(0);
 
-  const handleMouseMove = (e: React.MouseEvent) => {
-    const el = sectionRef.current;
-    if (!el) return;
-    const { left, width } = el.getBoundingClientRect();
-    const x = ((e.clientX - left) / width - 0.5) * 14;
-    setOffset({ x, y: 0 });
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const el = sectionRef.current;
+      if (!el) return;
+      const { top, height } = el.getBoundingClientRect();
+      // progress: 0 when section top is at viewport top, 1 when section bottom leaves
+      const progress = Math.max(0, Math.min(1, -top / (height * 0.8)));
+      setScrollX(progress * 60); // up to 60px horizontal drift
+    };
 
-  const handleMouseLeave = () => setOffset({ x: 0, y: 0 });
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <section
       id="about"
       ref={sectionRef}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
       className="relative pt-36 pb-24 px-6 bg-[#F8FAFF] overflow-hidden"
     >
       {/* Faint background blob */}
@@ -65,8 +67,8 @@ export default function HeroSection() {
               alt="Spendy Wendy app"
               className="w-auto max-h-[570px] object-contain drop-shadow-2xl"
               style={{
-                transform: `translateX(${offset.x}px)`,
-                transition: "transform 0.6s ease-out",
+                transform: `translateX(${scrollX}px)`,
+                transition: "transform 0.25s ease-out",
               }}
             />
           </div>
