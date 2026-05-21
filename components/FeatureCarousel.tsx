@@ -91,7 +91,7 @@ export default function FeatureCarousel() {
   return (
     <div className="w-full">
       {/* Slide */}
-      <div className="bg-[#F8FAFF] rounded-3xl border border-slate-200 overflow-hidden">
+      <div className="rounded-3xl border border-slate-200 overflow-hidden">
         <div className="flex flex-col md:flex-row min-h-[420px]">
           {/* LEFT — text content */}
           <div
