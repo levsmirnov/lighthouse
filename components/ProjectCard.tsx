@@ -9,9 +9,16 @@ export type Project = {
   mockupSrc?: string;
   mockupGradient: string;
   logoSrc?: string;
+  accent?: string; // hex color for badges, checkmarks, buttons
 };
 
 export default function ProjectCard({ project }: { project: Project }) {
+  const accent = project.accent ?? "#2563EB";
+
+  // Derived light tints for badge background and hover
+  const accentBg  = `${accent}18`; // ~10% opacity
+  const accentHoverBg = `${accent}10`;
+
   return (
     <div className="rounded-3xl overflow-hidden">
       <div className="flex flex-col md:flex-row">
@@ -50,6 +57,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
         {/* Text content */}
         <div className="flex-1 p-10 md:p-12 flex flex-col justify-center">
+          {/* Icon + category badge */}
           <div className="flex items-center gap-3 mb-4">
             {project.logoSrc && (
               <img
@@ -58,19 +66,26 @@ export default function ProjectCard({ project }: { project: Project }) {
                 className="w-12 h-12 rounded-xl shadow-sm flex-shrink-0"
               />
             )}
-            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full">
+            <span
+              className="inline-block px-4 py-1.5 text-sm font-semibold rounded-full"
+              style={{ background: accentBg, color: accent }}
+            >
               {project.category}
             </span>
           </div>
+
           <h3 className="text-3xl font-bold text-slate-950 mb-4">{project.name}</h3>
           <p className="text-slate-500 text-base leading-relaxed mb-6">
             {project.description}
           </p>
+
+          {/* Feature list */}
           <ul className="space-y-3 mb-8">
             {project.features.map((feature) => (
               <li key={feature} className="flex items-center gap-3 text-slate-700">
                 <svg
-                  className="flex-shrink-0 text-blue-600"
+                  className="flex-shrink-0"
+                  style={{ color: accent }}
                   width="18"
                   height="18"
                   viewBox="0 0 24 24"
@@ -86,16 +101,25 @@ export default function ProjectCard({ project }: { project: Project }) {
               </li>
             ))}
           </ul>
+
+          {/* Buttons */}
           <div className="flex flex-wrap gap-3">
             <a
               href="#"
-              className="px-6 py-3 btn-gradient text-white font-semibold rounded-full text-sm"
+              className="px-6 py-3 text-white font-semibold rounded-full text-sm transition-opacity hover:opacity-90"
+              style={{ background: accent }}
             >
               Download on App Store
             </a>
             <Link
               href={`/projects/${project.slug}`}
-              className="px-6 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold rounded-full text-sm transition-colors"
+              className="px-6 py-3 border-2 font-semibold rounded-full text-sm transition-colors"
+              style={{
+                borderColor: accent,
+                color: accent,
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.background = accentHoverBg)}
+              onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
             >
               Learn More →
             </Link>

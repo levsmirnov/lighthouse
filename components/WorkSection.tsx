@@ -18,6 +18,7 @@ const projects: Project[] = [
     mockupSrc: "/images/Simulator Screenshot - iPhone 17 Pro - 2026-05-20 at 13.13.31-portrait.png",
     mockupGradient: "from-blue-400 to-blue-600",
     logoSrc: "/images/Frame 14.png",
+    accent: "#2563EB",
   },
   {
     slug: "ritualloop",
@@ -33,6 +34,7 @@ const projects: Project[] = [
     mockupSrc: "/images/iPhone 14 & 15 Pro - 17 copy-portrait.png",
     mockupGradient: "from-violet-400 to-purple-600",
     logoSrc: "/images/remore_the_circle_leave_only_t_Nano_Banana_2_12441.png",
+    accent: "#44403c",
   },
   {
     slug: "hushwood",
@@ -48,6 +50,7 @@ const projects: Project[] = [
     mockupSrc: "/images/hushwood-mockup.png",
     mockupGradient: "from-green-400 to-emerald-600",
     logoSrc: "/images/hushwood-icon.png",
+    accent: "#16a34a",
   },
   {
     slug: "plankster",
@@ -63,6 +66,7 @@ const projects: Project[] = [
     mockupSrc: "/images/iPhone 14 & 15 Pro - 17 (3)-portrait.png",
     mockupGradient: "from-orange-400 to-red-500",
     logoSrc: "/images/Minimalist_app_icon_logo_for_a_Nano_Banana_2_50314.png",
+    accent: "#ea580c",
   },
 ];
 
