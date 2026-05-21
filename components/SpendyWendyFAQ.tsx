@@ -133,7 +133,7 @@ export default function SpendyWendyFAQ() {
   const visible = showAll ? faqs : faqs.slice(0, VISIBLE_BY_DEFAULT);
 
   return (
-    <div className="mb-12">
+    <div id="faq" className="mb-12 scroll-mt-28">
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
         <h2 className="text-2xl font-bold text-slate-950">FAQ</h2>
