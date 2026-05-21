@@ -18,6 +18,13 @@ const projects: Record<string, ProjectData> = {
       "Spendy Wendy is a smart personal and family finance tracker designed exclusively for iPhone. It helps you take control of your money with a clean, intuitive interface that makes budgeting feel effortless. Track income and expenses across multiple wallets, set category budgets, and get insights that actually make sense. Whether you're managing your own finances or coordinating with family members, Spendy Wendy keeps everyone on the same page — beautifully.",
     gradient: "from-blue-400 to-blue-600",
   },
+  "ritualloop": {
+    name: "RitualLoop",
+    category: "Habit Tracker App",
+    description:
+      "RitualLoop is a minimalist habit tracker with gamification built in. Create your daily rituals, mark them done with a single tap, and watch your Loop Streak grow — an unbroken chain of consistent days. Your character levels up as you complete rituals, weekly reviews keep you honest, and quiet reminders arrive exactly when you need them. Build habits. Close the loop. Every day.",
+    gradient: "from-violet-400 to-purple-600",
+  },
   "focusflow": {
     name: "FocusFlow",
     category: "Productivity App",
@@ -37,6 +44,7 @@ const projects: Record<string, ProjectData> = {
 export function generateStaticParams() {
   return [
     { slug: "spendy-wendy" },
+    { slug: "ritualloop" },
     { slug: "focusflow" },
     { slug: "vitalize" },
   ];

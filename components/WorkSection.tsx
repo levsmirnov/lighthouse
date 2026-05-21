@@ -20,6 +20,21 @@ const projects: Project[] = [
     logoSrc: "/images/Frame 14.png",
   },
   {
+    slug: "ritualloop",
+    category: "Habit Tracker App",
+    name: "RitualLoop",
+    description:
+      "Build habits. Close the loop. Every day. A minimalist habit tracker with gamification — create daily rituals, track your streaks, and level up your character as you grow.",
+    features: [
+      "Loop Streak — daily streak counter",
+      "Character Level — gamified progress",
+      "Weekly Review & quiet reminders",
+    ],
+    mockupSrc: "/images/iPhone 14 & 15 Pro - 17 copy-portrait.png",
+    mockupGradient: "from-violet-400 to-purple-600",
+    logoSrc: "/images/remore_the_circle_leave_only_t_Nano_Banana_2_12441.png",
+  },
+  {
     slug: "focusflow",
     category: "Productivity App",
     name: "FocusFlow",
