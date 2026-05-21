@@ -13,16 +13,20 @@ export type Project = {
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="bg-[#F8FAFF] rounded-3xl overflow-hidden border border-slate-200">
+    <div className="rounded-3xl overflow-hidden">
       <div className="flex flex-col md:flex-row">
         {/* Mockup */}
         {project.mockupSrc ? (
           <div className="flex-1 flex items-center justify-center py-8 px-6 min-h-64 md:min-h-[400px]">
-            <img
-              src={project.mockupSrc}
-              alt={`${project.name} mockup`}
-              className="max-h-[420px] w-auto object-contain drop-shadow-2xl animate-rock"
-            />
+            <div className="relative">
+              <img
+                src={project.mockupSrc}
+                alt={`${project.name} mockup`}
+                className="max-h-[420px] w-auto object-contain animate-rock relative z-10"
+              />
+              {/* Shadow under phone */}
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-6 bg-black/20 blur-xl rounded-full" />
+            </div>
           </div>
         ) : (
           <div
