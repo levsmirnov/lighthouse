@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FeatureCarousel from "@/components/FeatureCarousel";
 
 type ProjectData = {
   name: string;
@@ -57,7 +58,7 @@ export default async function ProjectPage({
 
   return (
     <div className="pt-24 pb-20 px-6 min-h-screen bg-white">
-      <div className="max-w-3xl mx-auto">
+      <div className={`mx-auto ${slug === "spendy-wendy" ? "max-w-5xl" : "max-w-3xl"}`}>
         {/* Back link */}
         <Link
           href="/#work"
@@ -94,15 +95,24 @@ export default async function ProjectPage({
           {project.description}
         </p>
 
-        {/* Screenshots placeholder */}
-        <div className="w-full h-72 rounded-3xl flex items-center justify-center mb-12 relative overflow-hidden bg-slate-100">
-          <div
-            className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20`}
-          />
-          <p className="relative text-slate-500 text-lg font-semibold">
-            Screenshots coming soon
-          </p>
-        </div>
+        {/* Feature showcase */}
+        {slug === "spendy-wendy" ? (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-slate-950 mb-6">
+              Key Features
+            </h2>
+            <FeatureCarousel />
+          </div>
+        ) : (
+          <div className="w-full h-72 rounded-3xl flex items-center justify-center mb-12 relative overflow-hidden bg-slate-100">
+            <div
+              className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20`}
+            />
+            <p className="relative text-slate-500 text-lg font-semibold">
+              Screenshots coming soon
+            </p>
+          </div>
+        )}
 
         {/* App Store button */}
         <a
