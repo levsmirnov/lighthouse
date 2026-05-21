@@ -22,6 +22,17 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
+/* 3D phone rock animation */
+@keyframes rock {
+  0%, 100% { transform: perspective(800px) rotateY(-8deg); }
+  50%       { transform: perspective(800px) rotateY(8deg); }
+}
+
+.animate-rock {
+  animation: rock 5s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
 /* Animated gradient buttons */
 @keyframes gradient-shift {
   0%   { background-position: 0% 50%; }

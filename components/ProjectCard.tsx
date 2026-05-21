@@ -21,7 +21,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             <img
               src={project.mockupSrc}
               alt={`${project.name} mockup`}
-              className="max-h-[420px] w-auto object-contain drop-shadow-2xl"
+              className="max-h-[420px] w-auto object-contain drop-shadow-2xl animate-rock"
             />
           </div>
         ) : (
