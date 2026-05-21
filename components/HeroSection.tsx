@@ -8,10 +8,9 @@ export default function HeroSection() {
   const handleMouseMove = (e: React.MouseEvent) => {
     const el = sectionRef.current;
     if (!el) return;
-    const { left, top, width, height } = el.getBoundingClientRect();
-    const x = ((e.clientX - left) / width - 0.5) * 28;
-    const y = ((e.clientY - top) / height - 0.5) * 20;
-    setOffset({ x, y });
+    const { left, width } = el.getBoundingClientRect();
+    const x = ((e.clientX - left) / width - 0.5) * 14;
+    setOffset({ x, y: 0 });
   };
 
   const handleMouseLeave = () => setOffset({ x: 0, y: 0 });
@@ -66,8 +65,8 @@ export default function HeroSection() {
               alt="Spendy Wendy app"
               className="w-auto max-h-[570px] object-contain drop-shadow-2xl"
               style={{
-                transform: `translate(${offset.x}px, ${offset.y}px)`,
-                transition: "transform 0.12s ease-out",
+                transform: `translateX(${offset.x}px)`,
+                transition: "transform 0.6s ease-out",
               }}
             />
           </div>
