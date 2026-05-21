@@ -11,3 +11,31 @@ html {
 body {
   font-family: var(--font-inter), Arial, sans-serif;
 }
+
+/* Floating phone animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-16px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Animated gradient buttons */
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #2563eb, #4f8ef7, #1d4ed8, #3b82f6);
+  background-size: 300% 300%;
+  animation: gradient-shift 4s ease infinite;
+  transition: opacity 0.2s;
+}
+
+.btn-gradient:hover {
+  opacity: 0.9;
+}

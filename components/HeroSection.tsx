@@ -105,7 +105,7 @@ export default function HeroSection() {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#work"
-                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-colors"
+                className="px-8 py-3 btn-gradient text-white font-semibold rounded-full"
               >
                 See Our Work
               </a>
@@ -123,7 +123,7 @@ export default function HeroSection() {
             <img
               src="/images/Simulator Screenshot - iPhone 17 Pro - 2026-05-20 at 13.13.31-left copy.png"
               alt="Spendy Wendy app"
-              className="w-auto max-h-[570px] object-contain drop-shadow-2xl"
+              className="w-auto max-h-[570px] object-contain drop-shadow-2xl animate-float"
             />
           </div>
 
