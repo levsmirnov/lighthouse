@@ -125,6 +125,21 @@ export default async function ProjectPage({
             </div>
             <SpendyWendyFAQ />
             <SpendyWendySupportForm />
+            {/* Legal links */}
+            <div className="border-t border-slate-100 pt-6 mt-4 flex flex-wrap gap-x-6 gap-y-2">
+              <Link
+                href="/privacy/spendy-wendy"
+                className="text-slate-400 hover:text-blue-600 text-sm transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <a
+                href="mailto:team@lighthouselab.eu"
+                className="text-slate-400 hover:text-blue-600 text-sm transition-colors"
+              >
+                team@lighthouselab.eu
+              </a>
+            </div>
           </>
         ) : (
           <div className="w-full h-72 rounded-3xl flex items-center justify-center mb-12 relative overflow-hidden bg-slate-100">
