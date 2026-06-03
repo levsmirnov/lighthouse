@@ -24,7 +24,14 @@ export default function SpendyWendySupportForm() {
       <div className="mb-6">
         <h2 className="text-2xl font-bold text-slate-950 mb-1">Contact Support</h2>
         <p className="text-slate-500 text-sm">
-          Have a question or ran into an issue? We&apos;ll get back to you within 24 hours.
+          Have a question or ran into an issue? We&apos;ll get back to you within 24 hours.{" "}
+          Or email us directly at{" "}
+          <a
+            href="mailto:team@lighthouselab.eu"
+            className="text-blue-600 hover:underline font-medium"
+          >
+            team@lighthouselab.eu
+          </a>
         </p>
       </div>
 
